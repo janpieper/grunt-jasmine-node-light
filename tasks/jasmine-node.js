@@ -6,8 +6,6 @@ module.exports = function(grunt) {
     var exec = require('child_process').exec,
         done = this.async();
 
-    grunt.config.requires('jasmine-node.args');
-
     var args = grunt.config('jasmine-node.args');
     var jasmine = exec('jasmine-node ' + args, function (error) {
       if (error !== null) console.log('Error: ' + error);
