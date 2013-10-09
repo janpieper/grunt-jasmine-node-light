@@ -1,18 +1,13 @@
 'use strict';
 
 module.exports = function(grunt) {
-
-  grunt.initConfig({
-    'jasmine-node': {
-      'args': '--matchall test'
-    }
-  });
-
   grunt.registerTask('jasmine-node', '', function() {
     var exec = require('child_process').exec,
         done = this.async();
 
-    var args = grunt.config('jasmine-node.args');
+    var defaultArgs = '--matchall test',
+        args = grunt.config('jasmine-node.args') || defaultArgs;
+
     var jasmine = exec('jasmine-node ' + args, function (error) {
       if (error !== null) console.log('Error: ' + error);
     });
