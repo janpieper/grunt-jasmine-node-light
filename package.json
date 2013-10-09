@@ -1,0 +1,16 @@
+{
+  "name": "grunt-contrib-jasmine-node-light",
+  "version": "0.0.1",
+  "description": "A simple Grut task that runs the jasmine-node tests",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [ "grunt", "task", "jasmine" ],
+  "author": "Vlad GURDIGA",
+  "license": "MTI",
+  "devDependencies": {
+    "grunt": "0.4.1",
+    "jshint": "2.1.11"
+  }
+}
