@@ -2,6 +2,12 @@
 
 module.exports = function(grunt) {
 
+  grunt.initConfig({
+    'jasmine-node': {
+      'args': '--matchall test'
+    }
+  });
+
   grunt.registerTask('jasmine-node', '', function() {
     var exec = require('child_process').exec,
         done = this.async();

@@ -12,7 +12,7 @@ command line args in `grunt.initConfig`:
       }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-jasmine-node-light');
+    grunt.loadNpmTasks('grunt-jasmine-node-light');
 
 ### Tests
 

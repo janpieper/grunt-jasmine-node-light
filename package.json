@@ -1,6 +1,6 @@
 {
-  "name": "grunt-contrib-jasmine-node-light",
-  "version": "0.0.4",
+  "name": "grunt-jasmine-node-light",
+  "version": "0.0.5",
   "description": "A simple Grut task that runs the jasmine-node tests",
   "main": "Gruntfile.js",
   "scripts": {
