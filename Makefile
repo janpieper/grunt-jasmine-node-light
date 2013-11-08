@@ -1,4 +1,4 @@
-default: jshint
+default: jshint grunt
 
 jshint:
 	@jshint \
@@ -8,3 +8,9 @@ jshint:
 		--extra-ext .json \
 		--show-non-errors \
 		./
+
+grunt:
+	@grunt
+
+publish:
+	@npm publish

@@ -5,21 +5,17 @@ module.exports = function(grunt) {
     var exec = require('child_process').exec,
         done = this.async();
 
-    var defaultArgs = '--matchall test',
+    var defaultArgs = '--captureExceptions --matchall test',
         args = grunt.config('jasmine-node.args') || defaultArgs;
 
     var jasmine = exec('jasmine-node ' + args, function (error) {
       if (error !== null) console.log('Error: ' + error);
     });
 
-    jasmine.stdout.on('data', output);
-    jasmine.stderr.on('data', output);
+    jasmine.stdout.pipe(process.stdout);
+    jasmine.stderr.pipe(process.stdout);
     jasmine.on('exit', function(code) { done(code === 0); });
 
   });
-
-  function output(data) {
-    process.stdout.write(data);
-  }
 
 };
